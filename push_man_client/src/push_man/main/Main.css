@@ -1,0 +1,11 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+VBox.mainRoot{
+	-fx-background-color:rgba(0,0,0,0.5);
+	-fx-padding:20;	
+}
+
+.loading{
+	-fx-font-size:40;
+	-fx-font-weight:bold;
+	-fx-text-fill:WHITE;	
+}

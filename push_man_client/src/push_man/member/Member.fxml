@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane
+ stylesheets="/push_man/main/font.css, /push_man/member/member.css" 
+fx:controller="push_man.member.MemberController" 
+prefHeight="300.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <StackPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="joinAnchor" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="52.0" layoutY="14.0" text="회원가입">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="62.0" text="아이디" />
+                  <Label layoutX="11.0" layoutY="108.0" text="비밀번호" />
+                  <Label layoutX="11.0" layoutY="152.0" text="비밀번호확인" />
+                  <Label layoutX="11.0" layoutY="199.0" text="닉네임" />
+                  <TextField fx:id="joinID" layoutX="11.0" layoutY="79.0" prefHeight="23.0" prefWidth="176.0" />
+                  <PasswordField fx:id="joinPW" layoutX="11.0" layoutY="123.0" prefHeight="23.0" prefWidth="176.0" />
+                  <PasswordField fx:id="joinRePW" layoutX="11.0" layoutY="173.0" prefHeight="23.0" prefWidth="177.0" />
+                  <TextField fx:id="joinName" layoutX="11.0" layoutY="218.0" prefHeight="23.0" prefWidth="176.0" />
+                  <Button fx:id="btnJoin" layoutX="14.0" layoutY="253.0" mnemonicParsing="false" text="확인" />
+                  <Hyperlink fx:id="loginLinkBtn" layoutX="142.0" layoutY="254.0" text="로그인" />
+                  <Label fx:id="checkID" layoutX="52.0" layoutY="62.0" prefHeight="15.0" prefWidth="133.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="loginAnchor" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="64.0" layoutY="14.0" text="로그인">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="81.0" text="아이디" />
+                  <TextField fx:id="loginID" layoutX="14.0" layoutY="105.0" prefHeight="23.0" prefWidth="176.0" />
+                  <Label layoutX="14.0" layoutY="142.0" text="비밀번호" />
+                  <PasswordField fx:id="loginPW" layoutX="14.0" layoutY="165.0" prefHeight="23.0" prefWidth="176.0" />
+                  <Button fx:id="btnLogin" layoutX="14.0" layoutY="220.0" mnemonicParsing="false" text="확인" />
+                  <Hyperlink fx:id="joinLinkBtn" layoutX="130.0" layoutY="221.0" text="회원가입" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </left>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" />
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/resources/system_image/loading.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
