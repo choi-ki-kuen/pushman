@@ -1,0 +1,80 @@
+.table-view{
+	-fx-background-color:black;
+}
+.table-view .table-cell{
+	-fx-text-fill:white;
+	-fx-font-family:'Maplestory';
+}
+
+.table-view .column-header{
+	-fx-background-color:black;
+}
+
+.table-view .column-header .label{
+	-fx-text-fill:white;
+}
+
+.table-row-cell{
+	-fx-background-color:-fx-table-cell-border-color, #616161;
+	-fx-background-insets:0.0, 0.0 0.0 1.0 0.0;
+	-fx-padding:0.0;
+} 
+
+.table-row-cell:odd{
+	-fx-background-color:-fx-table-cell-border-color, #424242;
+	-fx-background-insets:0.0, 0.0 0.0 1.0 0.0;
+	-fx-padding:0.0;
+} 
+
+.table-row-cell:selected{
+	-fx-background-color:white;
+	-fx-background-insets:0.0;
+	-fx-background-radius:1.0;
+}
+
+.table-row-cell:selected .table-cell{
+	-fx-text-fill : black;
+}
+
+.combo-box{
+	-fx-background-color:black;
+}
+
+.combo-box-base .text{
+	-fx-fill: WHITE;
+}
+
+.combo-box-popup > .list-view .list-cell{
+	-fx-background-color:black;
+}
+ 
+.combo-box-base .list-view .list-cell:hover .text{
+	-fx-fill: black;
+}
+
+.combo-box-popup > .list-view .list-cell:hover{
+	-fx-background-color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

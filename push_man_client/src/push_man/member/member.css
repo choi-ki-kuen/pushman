@@ -1,0 +1,29 @@
+StackPane{
+	-fx-background-image:url("/push_man/game/game_image/main.png");
+	-fx-background-size:100% 100%;
+	-fx-background-repeat:no-repeat;
+}
+
+AnchorPane{
+	-fx-background-color:rgba(0,0,0,0.7);
+}
+
+Label{
+	-fx-text-fill:white;
+	-fx-font-weight:bold;
+}
+
+TextField, PasswordField{
+	-fx-background-color:rgba(255,255,255,0.5);
+	-fx-text-fill:white;
+}
+
+Hyperlink,
+Hyperlink:visited{
+	-fx-text-fill:white;
+	-fx-font-weight:bold;
+}
+
+
+
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane
+ stylesheets="/push_man/waitting_room/room.css, /push_man/main/font.css" 
+ fx:controller="push_man.waitting_room.WaittingRoomController" 
+ xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <top>
+      <HBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="stageBox" maxWidth="1.7676931345623157E308" promptText="Stage 선택" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnStart" mnemonicParsing="false" text="게임시작" />
+            <Label alignment="CENTER" prefHeight="23.0" prefWidth="200.0" style="-fx-background-color: white;" text="대기실 목록" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="rankingList" BorderPane.alignment="CENTER">
+      	 <columns></columns>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <right>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="userList" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+              </columns>
+            </TableView>
+            <TextArea fx:id="chatArea" editable="false" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox spacing="2.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="inputText" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnSend" mnemonicParsing="false" text="전송" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </HBox>
+   </bottom>
+  </BorderPane>
+
