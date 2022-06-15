@@ -38,7 +38,6 @@ public class MainThread extends Thread {
 						new BufferedInputStream(ClientMain.socket.getInputStream()));
 				// 서버에서 전달된 데이터 전달
 				if ((o = ois.readObject()) != null) {
-					System.out.println(o);
 					// 회원 관련 요청 처리
 					if (o instanceof MemberVO) {
 						memberController.receiveData((MemberVO) o);
@@ -47,7 +46,6 @@ public class MainThread extends Thread {
 						// or 대기실 채팅
 						waittingRoomController.receiveData(o);
 					}else if(o instanceof ScoreVO) {
-						System.out.println("게임 관련 요청 처리");
 						gameController.receiveData((ScoreVO)o);
 					}
 				}
@@ -64,7 +62,6 @@ public class MainThread extends Thread {
 					new BufferedOutputStream(ClientMain.socket.getOutputStream()));
 			oos.writeObject(o);
 			oos.flush();
-			System.out.println("send 완료");
 		} catch (IOException e) {
 			stopClient();
 		}
@@ -80,7 +77,6 @@ public class MainThread extends Thread {
 				alert.showAndWait();
 				Platform.exit();
 			});
-			System.out.println("연결 종료");
 		}
 		this.interrupt();
 		if (ClientMain.socket != null && !ClientMain.socket.isClosed()) {
